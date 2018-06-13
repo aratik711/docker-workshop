@@ -30,6 +30,10 @@ Start a new container from that image running the `bash` command so you can get 
 
 **NOTE:** You will need to pass two additional flags to the docker run command to get it to launch an interactive terminal session.
 
+To start the redis server use the following command: `redis-server /usr/src/custom-redis.conf &`. Press Enter after you see a meesage: The server is now ready to accept connections on port 6379
+
+To connect to the redis server execute `redis-cli`, then execute `ping` check if the response is `PONG`
+
 Using the nano command-line text editor (unfortunately you cannot install any others in this image), edit the file `/usr/src/custom-redis.conf`. 
 
 Uncomment the `requirepass` line in the file (you can optionally change the password provided). Then save the file, exit your text editor, and use control + d to end your shell session in the container.
