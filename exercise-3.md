@@ -30,7 +30,7 @@ Start a new container from that image running the `bash` command so you can get 
 
 **NOTE:** You will need to pass two additional flags to the docker run command to get it to launch an interactive terminal session.
 
-To start the redis server use the following command: `redis-server /usr/src/custom-redis.conf &`. Press Enter after you see a meesage: The server is now ready to accept connections on port 6379
+To start the redis server use the following command: `redis-server /usr/src/custom-redis.conf &`. Press Enter after you see a message: The server is now ready to accept connections on port 6379
 
 To connect to the redis server execute `redis-cli`, then execute `ping` check if the response is `PONG`
 
@@ -63,5 +63,7 @@ docker push [your namespace]/redis-password
 ```
 
 Now your new image is available for anyone to use! https://hub.docker.com/u/
+
+You can then create a container from the new image, start the redis server and check for the response of `ping` command. Check if you get a `(error) NOAUTH Authentication required` error. If so then pass the password as parameter to the `redis-cli` command.
 
 Once you're done with that, you can wrap things up with [Exercise 4](exercise-4.md).
